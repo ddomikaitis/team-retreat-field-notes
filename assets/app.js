@@ -3,27 +3,30 @@ const options = [
     id: 'big-sur', name: 'Big Sur', place: 'California coast', region: 'Pacific edge',
     months: ['oct','nov'], appetite: 'moderate', climate: 'mild', duration: '4 nights', window: 'Late Oct–mid Nov',
     verdict: 'The strongest emotional reset: redwoods, cliffs and long dinners. Uneven travel, but a beautifully simple retreat once everyone arrives.',
-    route: 'LA drives; Scotland flies to SFO/SJC plus group transfer.',
+    route: 'El Segundo group drives 5–6 hours; Edinburgh group flies to SFO/SJC plus a 2–3 hour transfer.',
     risk: 'Highway 1 disruption, rain later in the season, limited large-group inventory.',
     shape: 'One lodge · half-day workshop · guided hike · coastal dinner · unstructured fireside time.',
+    sizeFit: { small: [10, 'Ideal: intimate lodge or carefully confirmed yurt plan.'], medium: [6, 'Workable, but use a group lodge rather than a quiet yurt property.'], large: [4, 'Possible only with a group-capable lodge, transport plan and dispersed-room tradeoff.'] },
     scores: { impact: 10, fairness: 3, access: 6, season: 7, workability: 7, comfort: 8 }
   },
   {
     id: 'nuuk', name: 'Nuuk', place: 'Greenland', region: 'Arctic capital',
     months: ['oct','nov','dec','jan'], appetite: 'high', climate: 'cold', duration: '5 nights', window: 'Best in early Oct',
     verdict: 'A genuine expedition with enough city infrastructure to function. The travel and weather become part of the shared story.',
-    route: 'Scotland via KEF/CPH; LA usually one or two connections.',
+    route: 'Edinburgh via KEF/CPH; LAX usually requires one or two connections.',
     risk: 'Infrequent flights, weather delays and a much longer journey for LA.',
     shape: 'Buffer night · one workday · fjord trip · cultural program · flexible weather day.',
+    sizeFit: { small: [10, 'Ideal expedition scale with flexible guides and dining.'], medium: [8, 'Strong, with early hotel and activity blocks.'], large: [6, 'Feasible, but flight inventory and weather contingencies become a real operation.'] },
     scores: { impact: 10, fairness: 4, access: 3, season: 3, workability: 7, comfort: 6 }
   },
   {
     id: 'hudson', name: 'Hudson Valley', place: 'New York', region: 'Forest & river',
     months: ['oct','nov'], appetite: 'moderate', climate: 'mild', duration: '4 nights', window: 'Late Oct–early Nov',
     verdict: 'The rational winner: balanced flights into New York, excellent properties and just enough removal from ordinary city life.',
-    route: 'Nonstop-rich gateway for LA and Edinburgh, then a shared 90–150 minute transfer.',
+    route: 'LAX and Edinburgh use a nonstop-rich New York gateway, then share a 90–150 minute transfer.',
     risk: 'Less singular than Greenland or Big Sur; peak foliage can inflate rates.',
     shape: 'Country lodge · strategy morning · trail or team challenge · chef dinner · firepit close.',
+    sizeFit: { small: [8, 'Easy, though a large property may feel less intimate.'], medium: [9, 'Excellent range of lodges and private common spaces.'], large: [10, 'The strongest option for 30–40 without compromising logistics.'] },
     scores: { impact: 7, fairness: 10, access: 9, season: 7, workability: 9, comfort: 9 }
   },
   {
@@ -33,15 +36,17 @@ const options = [
     route: 'Both sides typically connect; routing quality varies sharply by day.',
     risk: 'Atlantic weather and limited schedules; price only after locking candidate dates.',
     shape: 'Eco-resort · crater walk · hot springs · farm-to-table dinner · one decision session.',
+    sizeFit: { small: [9, 'Ideal for a villa or eco-resort cluster.'], medium: [8, 'Strong if rooms and transfers are contracted early.'], large: [6, 'Possible, but airlift and island transport narrow the viable properties.'] },
     scores: { impact: 9, fairness: 7, access: 5, season: 6, workability: 7, comfort: 8 }
   },
   {
     id: 'madeira', name: 'Madeira', place: 'Portugal', region: 'Atlantic highlands',
     months: ['oct','nov','dec','jan'], appetite: 'moderate', climate: 'mild', duration: '5 nights', window: 'Nov–Jan',
     verdict: 'The best weather hedge: mountain landscapes, levada walks and polished hospitality without a harsh winter operating model.',
-    route: 'Easy from Scotland; LA normally needs a European connection.',
+    route: 'Easy from Edinburgh; LAX normally needs a European connection.',
     risk: 'Travel burden favors Scotland and resort areas can feel vacation-first.',
     shape: 'Hillside quinta · levada walk · canyon or coast day · private dinner · half-day working session.',
+    sizeFit: { small: [9, 'Easy to create an intimate quinta-based retreat.'], medium: [9, 'Strong hotel and activity infrastructure.'], large: [8, 'Very workable with a resort buyout or dedicated wing.'] },
     scores: { impact: 8, fairness: 5, access: 6, season: 10, workability: 8, comfort: 9 }
   },
   {
@@ -51,6 +56,7 @@ const options = [
     route: 'Long-haul to Singapore for both groups, then organized ferry and resort transfer.',
     risk: 'Jet lag, monsoon variability and a higher minimum trip length.',
     shape: 'Recovery night Singapore · ferry · beach resort · challenge day · CSR activity · closing dinner.',
+    sizeFit: { small: [8, 'Easy, though some resort programming may feel oversized.'], medium: [9, 'Excellent resort and ferry group infrastructure.'], large: [10, 'Built for this scale, including group ferry and event packages.'] },
     scores: { impact: 8, fairness: 8, access: 4, season: 7, workability: 9, comfort: 9 }
   },
   {
@@ -60,15 +66,17 @@ const options = [
     route: 'Multiple legs for both teams, followed by road and ferry or charter transfer.',
     risk: 'Many tourism services reduce after Canadian Thanksgiving; weather and transfers need slack.',
     shape: 'Single-property stay · community hosts · coastal walks · studio visits · long-table meals.',
+    sizeFit: { small: [10, 'The right scale for a highly personal outpost experience.'], medium: [5, 'Property and transfer choices tighten quickly.'], large: [2, 'Not recommended: airlift, ferry and lodging complexity overwhelm the concept.'] },
     scores: { impact: 10, fairness: 7, access: 2, season: 3, workability: 6, comfort: 8 }
   },
   {
     id: 'iceland', name: 'South Iceland', place: 'via Reykjavík', region: 'Fire & ice',
     months: ['oct','nov'], appetite: 'moderate', climate: 'cold', duration: '4 nights', window: 'October preferred',
     verdict: 'More accessible than Nuuk and still cinematic. A private south-coast base prevents it from becoming a standard Reykjavík weekend.',
-    route: 'Very easy from Scotland; LA generally connects through a US or European gateway.',
+    route: 'Very easy from Edinburgh; LAX generally connects through a US or European gateway.',
     risk: 'Not travel-neutral; wind and winter conditions can rewrite the itinerary.',
     shape: 'Private lodge · geothermal soak · guided glacier/coast day · one workshop · chef dinner.',
+    sizeFit: { small: [9, 'Excellent for a private lodge and flexible guide.'], medium: [9, 'Strong range of coaches, hotels and activity operators.'], large: [8, 'Very workable, though private-lodge choices narrow.'] },
     scores: { impact: 8, fairness: 5, access: 7, season: 5, workability: 9, comfort: 8 }
   }
 ];
@@ -91,7 +99,7 @@ const presets = {
 
 const state = {
   weights: { ...presets.memory },
-  filters: { month: 'all', appetite: 'all', climate: 'all' },
+  filters: { size: 'all', month: 'all', appetite: 'all', climate: 'all' },
   shortlist: JSON.parse(localStorage.getItem('retreat-shortlist') || '[]')
 };
 
@@ -119,7 +127,9 @@ function buildControls() {
 
 function score(option) {
   const totalWeight = Object.values(state.weights).reduce((sum, value) => sum + value, 0) || 1;
-  const weighted = Object.entries(state.weights).reduce((sum, [key, weight]) => sum + option.scores[key] * weight, 0);
+  const adjustedScores = { ...option.scores };
+  if (state.filters.size !== 'all') adjustedScores.workability = option.sizeFit[state.filters.size][0];
+  const weighted = Object.entries(state.weights).reduce((sum, [key, weight]) => sum + adjustedScores[key] * weight, 0);
   return (weighted / totalWeight).toFixed(1);
 }
 
@@ -140,16 +150,24 @@ function render() {
 
 function cardMarkup(option, index) {
   const selected = state.shortlist.includes(option.id);
+  const sizeCopy = state.filters.size === 'all'
+    ? '<strong>Team size not set.</strong> Choose 6–10 or 30–40 above to expose a major planning tradeoff.'
+    : `<strong>${sizeLabel(state.filters.size)} fit ${option.sizeFit[state.filters.size][0]}/10.</strong> ${option.sizeFit[state.filters.size][1]}`;
   return `<article class="card ${index === 0 ? 'rank-1' : ''}">
-    <div class="card-visual"><span class="region-tag">${option.region}</span><span class="rank">${String(index + 1).padStart(2, '0')}</span></div>
+    <div class="card-visual"><span class="region-tag">${option.region}</span><span class="rank-lockup"><small>Live rank</small><span class="rank">${String(index + 1).padStart(2, '0')}</span></span></div>
     <div class="card-body">
       <h3>${option.name}</h3><p class="card-location">${option.place}</p>
       <p class="verdict">${option.verdict}</p>
       <div class="meta"><div><span>Best window</span><strong>${option.window}</strong></div><div><span>Minimum stay</span><strong>${option.duration}</strong></div></div>
+      <div class="size-fit">${sizeCopy}</div>
       <details class="card-details"><summary>Travel, risk & shape</summary><p><strong>Travel:</strong> ${option.route}</p><p><strong>Watch:</strong> ${option.risk}</p><p><strong>Shape:</strong> ${option.shape}</p></details>
       <div class="score-row"><div class="score-lockup"><strong>${option.weightedScore}</strong><span>/ 10</span></div><button class="shortlist ${selected ? 'selected' : ''}" data-id="${option.id}" type="button">${selected ? 'Shortlisted ✓' : 'Add to shortlist'}</button></div>
     </div>
   </article>`;
+}
+
+function sizeLabel(size) {
+  return { small: '6–10', medium: '11–29', large: '30–40' }[size];
 }
 
 function toggleShortlist(id) {
@@ -171,15 +189,15 @@ document.querySelectorAll('.preset').forEach(button => button.addEventListener('
   buildControls(); render();
 }));
 
-[['monthFilter','month'], ['appetiteFilter','appetite'], ['climateFilter','climate']].forEach(([id, key]) => {
+[['sizeFilter','size'], ['monthFilter','month'], ['appetiteFilter','appetite'], ['climateFilter','climate']].forEach(([id, key]) => {
   document.querySelector(`#${id}`).addEventListener('change', event => { state.filters[key] = event.target.value; render(); });
 });
 
 document.querySelector('#clearShortlist').addEventListener('click', () => { state.shortlist = []; localStorage.removeItem('retreat-shortlist'); render(); });
 document.querySelector('#resetAll').addEventListener('click', () => {
   state.weights = { ...presets.memory };
-  state.filters = { month: 'all', appetite: 'all', climate: 'all' };
-  ['monthFilter','appetiteFilter','climateFilter'].forEach(id => document.querySelector(`#${id}`).value = 'all');
+  state.filters = { size: 'all', month: 'all', appetite: 'all', climate: 'all' };
+  ['sizeFilter','monthFilter','appetiteFilter','climateFilter'].forEach(id => document.querySelector(`#${id}`).value = 'all');
   document.querySelectorAll('.preset').forEach(button => button.classList.toggle('active', button.dataset.preset === 'memory'));
   buildControls(); render();
 });

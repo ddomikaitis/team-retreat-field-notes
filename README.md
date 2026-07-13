@@ -1,6 +1,6 @@
 # Team retreat options
 
-Interactive decision artifact for a team split between Scotland and Los Angeles. The planning window is October 2026 through January 2027, and the concept is a destination-led team retreat rather than conference attendance.
+Interactive decision artifact for a team split between Edinburgh and the El Segundo/LAX area. The planning window is October 2026 through January 2027, and the concept is a destination-led team retreat rather than conference attendance.
 
 ## Open it
 
@@ -10,6 +10,8 @@ The artifact has no build step or external dependencies.
 - From this folder run `python -m http.server 8080` and visit `http://localhost:8080`.
 
 The shortlist is stored in browser `localStorage`; it does not modify these files.
+
+Team size is a live scoring input. Selecting `6–10`, `11–29` or `30–40` replaces each destination's generic group-readiness score with a size-specific fit score and operating note.
 
 ## Folder structure
 
@@ -36,8 +38,8 @@ The shortlist is stored in browser `localStorage`; it does not modify these file
 
 ## Current framing
 
-- Current emotional favorite: Big Sur.
+- Current emotional favorite and two-retreat strategy: Big Sur now, Scotland next.
 - Current expedition choice: Nuuk.
-- Current practical benchmark: Hudson Valley.
+- Current top single-retreat result under the default weights: Hudson Valley.
 - Current warm, neutral-ground wildcard: Bintan via Singapore.
 - Fairness can be evaluated across a sequence: e.g. Big Sur now and Scotland next.

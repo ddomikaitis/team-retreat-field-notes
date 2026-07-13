@@ -4,11 +4,12 @@ Last checked: 2026-07-13
 
 ## Planning frame
 
-- Origins: Los Angeles plus Scotland, provisionally Edinburgh/Glasgow.
+- Origins: Edinburgh and El Segundo, using EDI and LAX as the primary airport assumptions.
 - Window: October 2026 through January 2027.
 - Purpose: team connection with a small amount of substantive work; no conference dependency.
 - Preferred character: remote, landscape-led, distinctive, comfortable enough for a mixed team.
 - All travel times and scores remain planning estimates until dates, headcount and room policy are known.
+- Team-size bands in the artifact are `6–10`, `11–29` and `30–40`. Selecting one replaces the generic group-readiness score with a destination-specific size-fit score.
 
 ## Destination notes
 
@@ -85,6 +86,7 @@ Source:
 ## Items to verify after narrowing to three
 
 - Exact team headcount and required single rooms.
+- Whether a 30–40 person group should stay together for every activity or split into smaller operating cohorts.
 - Scottish departure airports and acceptable ground positioning.
 - Passport and visa/entry requirements for every traveler.
 - Door-to-door itineraries on the same candidate dates.

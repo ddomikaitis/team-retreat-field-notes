@@ -20,7 +20,7 @@
 
     <div class="hero-grid" id="top">
       <div class="hero-copy">
-        <p class="eyebrow">Scotland × Los Angeles · Oct 2026–Jan 2027</p>
+        <p class="eyebrow">Edinburgh × El Segundo · Oct 2026–Jan 2027</p>
         <h1>Where<br>should<br>we meet?</h1>
         <p class="dek">A destination-led team retreat shortlist: remote enough to matter, workable enough to do, and memorable without borrowing purpose from a conference.</p>
         <div class="hero-actions">
@@ -64,7 +64,7 @@
         <div>
           <p class="section-kicker">Decision lab</p>
           <h2>Shape the ranking</h2>
-          <p class="lab-intro">Adjust what matters. Scores are directional planning estimates, not quotes or live availability.</p>
+          <p class="lab-intro">Adjust what matters. The cards below are a live ranking under the current weights and filters—not an unranked idea list. Scores are directional planning estimates, not quotes or live availability.</p>
         </div>
         <div class="preset-row" role="group" aria-label="Scoring presets">
           <button class="preset active" data-preset="memory" type="button">Shared memory</button>
@@ -77,6 +77,14 @@
       <div class="controls section-pad" id="weightControls" aria-label="Ranking weights"></div>
 
       <div class="filterbar section-pad">
+        <label>Team size
+          <select id="sizeFilter">
+            <option value="all">Not set</option>
+            <option value="small">6–10 people</option>
+            <option value="medium">11–29 people</option>
+            <option value="large">30–40 people</option>
+          </select>
+        </label>
         <label>Window
           <select id="monthFilter">
             <option value="all">Any month</option>
@@ -101,7 +109,7 @@
             <option value="warm">Warm</option>
           </select>
         </label>
-        <div class="result-count"><strong id="resultCount">8</strong><span>options showing</span></div>
+        <div class="result-count"><strong id="resultCount">8</strong><span>ranked options</span></div>
       </div>
 
       <div class="cards section-pad" id="cards" aria-live="polite"></div>
@@ -116,13 +124,13 @@
     </section>
 
     <section class="recommendation section-pad">
-      <div class="recommendation-number">01</div>
+      <div class="recommendation-number">A→B</div>
       <div>
-        <p class="section-kicker">Current recommendation</p>
+        <p class="section-kicker">Strategic alternative · not live rank 01</p>
         <h2>Big Sur now.<br>Scotland next.</h2>
       </div>
       <div class="recommendation-copy">
-        <p>If the team is small and the aim is emotional impact, Big Sur remains the cleanest concept: four nights, one lodge, one facilitated half-day, redwoods and coast. It is not geographically fair—so make the fairness temporal.</p>
+        <p><strong>This is not the top single-retreat result above.</strong> It is a deliberate two-retreat strategy that becomes attractive only if the Scotland follow-up is a real commitment. If the team is small and the aim is emotional impact, Big Sur remains a powerful first chapter: four nights, one lodge, one facilitated half-day, redwoods and coast.</p>
         <ul>
           <li>Target late October or the first half of November.</li>
           <li>Use a group-capable lodge, not a quiet couples-oriented yurt property.</li>

@@ -18,6 +18,8 @@ Use this file to preserve choices and avoid reopening settled questions without 
 3. Hudson Valley — practical benchmark.
 4. Bintan — warm neutral-ground wildcard.
 
+The web artifact's numbered cards are a live ranking under the selected weights and filters. The Big Sur → Scotland section is a separate two-retreat strategy, not an override of live rank 01.
+
 ## Working principles
 
 - The trip does not need an external conference to justify it.

@@ -1,5 +1,13 @@
 # Revision log
 
+## 2026-07-13 — v1.1
+
+- Clarified that numbered destination cards are a live weighted ranking.
+- Added an explicit “Live rank” label to every card number.
+- Reframed Big Sur → Scotland as a two-retreat strategic alternative rather than a contradictory recommendation #1.
+- Locked the origin assumptions to Edinburgh and El Segundo/LAX.
+- Added team-size-aware ranking for 6–10, 11–29 and 30–40 people, with destination-specific operating notes.
+
 ## 2026-07-13 — v1.0
 
 - Created the destination-led team-retreat artifact.

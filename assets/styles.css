@@ -72,7 +72,7 @@ h2 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(45px, 6vw,
 .weight p { height: 36px; font-size: 11px; color: var(--muted); line-height: 1.35; }
 input[type="range"] { width: 100%; accent-color: var(--ember); }
 
-.filterbar { margin-top: 55px; display: grid; grid-template-columns: repeat(3, minmax(160px, 1fr)) .6fr; gap: 12px; align-items: end; }
+.filterbar { margin-top: 55px; display: grid; grid-template-columns: repeat(4, minmax(145px, 1fr)) .55fr; gap: 12px; align-items: end; }
 .filterbar label { display: flex; flex-direction: column; gap: 8px; font-size: 10px; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; }
 select { width: 100%; min-height: 46px; border: 1px solid var(--line); border-radius: 0; background: var(--paper); padding: 0 12px; }
 .result-count { display: flex; align-items: baseline; justify-content: flex-end; gap: 9px; min-height: 46px; }
@@ -87,7 +87,9 @@ select { width: 100%; min-height: 46px; border: 1px solid var(--line); border-ra
 .card-visual::after { content: ''; position: absolute; width: 230px; height: 230px; border: 1px solid rgba(229,255,69,.52); border-radius: 48% 52% 46% 54%; right: -42px; bottom: -145px; box-shadow: 0 0 0 18px rgba(229,255,69,.08), 0 0 0 38px rgba(229,255,69,.05); }
 .rank-1 .card-visual { min-height: 210px; }
 .region-tag { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--acid); }
-.rank { font-family: Georgia, serif; font-size: 52px; line-height: 1; position: relative; z-index: 1; }
+.rank-lockup { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; position: relative; z-index: 1; }
+.rank-lockup small { color: rgba(242,238,228,.56); font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.rank { font-family: Georgia, serif; font-size: 52px; line-height: .9; }
 .card-body { padding: 24px; display: flex; flex-direction: column; flex: 1; }
 .card h3 { font-family: Georgia, serif; font-size: 37px; font-weight: 400; letter-spacing: -.04em; margin: 0; }
 .card-location { color: var(--muted); font-size: 12px; margin: 6px 0 20px; }
@@ -104,6 +106,8 @@ select { width: 100%; min-height: 46px; border: 1px solid var(--line); border-ra
 .card-details { margin-top: 18px; }
 .card-details summary { cursor: pointer; color: var(--muted); font-size: 11px; font-weight: 800; }
 .card-details p { font-size: 12px; line-height: 1.55; color: var(--muted); }
+.size-fit { margin-top: 17px; padding: 10px 12px; background: var(--paper-2); font-size: 11px; line-height: 1.4; }
+.size-fit strong { color: var(--ember); }
 .empty { grid-column: 1/-1; padding: 70px 0; font-family: Georgia, serif; font-size: 30px; text-align: center; }
 
 .compare { padding-top: 100px; padding-bottom: 110px; }
