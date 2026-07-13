@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A decision tool for a Scotland and Los Angeles team retreat, October 2026 through January 2027.">
+  <title>Where should we meet?</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar" aria-label="Page navigation">
+      <a class="wordmark" href="#top">FIELD / NOTES <span>01</span></a>
+      <div class="navlinks">
+        <a href="#options">Options</a>
+        <a href="#method">Method</a>
+        <a href="#sources">Sources</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow">Scotland × Los Angeles · Oct 2026–Jan 2027</p>
+        <h1>Where<br>should<br>we meet?</h1>
+        <p class="dek">A destination-led team retreat shortlist: remote enough to matter, workable enough to do, and memorable without borrowing purpose from a conference.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#options">Explore the shortlist</a>
+          <button class="button ghost" id="resetAll" type="button">Reset preferences</button>
+        </div>
+      </div>
+
+      <aside class="hero-note" aria-label="Current recommendation">
+        <div class="note-index">Working thesis</div>
+        <p class="note-quote">“Choose the emotional signature first. Then make the travel fair over a sequence of retreats.”</p>
+        <div class="signal-grid">
+          <div><span>Best balanced</span><strong>Hudson Valley</strong></div>
+          <div><span>Most visceral</span><strong>Big Sur</strong></div>
+          <div><span>True expedition</span><strong>Nuuk</strong></div>
+          <div><span>Warm wildcard</span><strong>Bintan</strong></div>
+        </div>
+      </aside>
+    </div>
+    <div class="contour" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <section class="premise section-pad">
+      <div>
+        <p class="section-kicker">The brief</p>
+        <h2>Not a conference.<br>A shared memory.</h2>
+      </div>
+      <div class="premise-copy">
+        <p>The useful comparison is not “which city has the most activities?” It is whether the setting changes how the team relates: fewer transitions, one compelling landscape, good meals, and enough privacy for candid conversation.</p>
+        <div class="principles">
+          <article><span>01</span><h3>One base</h3><p>No daily hotel changes. Let the group settle.</p></article>
+          <article><span>02</span><h3>One work block</h3><p>A half-day of real decisions; no conference cosplay.</p></article>
+          <article><span>03</span><h3>One hard thing</h3><p>Weather, trail, boat or challenge—shared, not performative.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="decision-lab" id="options">
+      <div class="lab-header section-pad">
+        <div>
+          <p class="section-kicker">Decision lab</p>
+          <h2>Shape the ranking</h2>
+          <p class="lab-intro">Adjust what matters. Scores are directional planning estimates, not quotes or live availability.</p>
+        </div>
+        <div class="preset-row" role="group" aria-label="Scoring presets">
+          <button class="preset active" data-preset="memory" type="button">Shared memory</button>
+          <button class="preset" data-preset="fairness" type="button">Travel fairness</button>
+          <button class="preset" data-preset="easy" type="button">Easy execution</button>
+          <button class="preset" data-preset="warm" type="button">Winter sun</button>
+        </div>
+      </div>
+
+      <div class="controls section-pad" id="weightControls" aria-label="Ranking weights"></div>
+
+      <div class="filterbar section-pad">
+        <label>Window
+          <select id="monthFilter">
+            <option value="all">Any month</option>
+            <option value="oct">October</option>
+            <option value="nov">November</option>
+            <option value="dec">December</option>
+            <option value="jan">January</option>
+          </select>
+        </label>
+        <label>Travel appetite
+          <select id="appetiteFilter">
+            <option value="all">Any appetite</option>
+            <option value="moderate">Moderate</option>
+            <option value="high">High / expedition</option>
+          </select>
+        </label>
+        <label>Climate
+          <select id="climateFilter">
+            <option value="all">Any climate</option>
+            <option value="cold">Cold / dramatic</option>
+            <option value="mild">Mild</option>
+            <option value="warm">Warm</option>
+          </select>
+        </label>
+        <div class="result-count"><strong id="resultCount">8</strong><span>options showing</span></div>
+      </div>
+
+      <div class="cards section-pad" id="cards" aria-live="polite"></div>
+    </section>
+
+    <section class="compare section-pad" id="compareSection" hidden>
+      <div class="compare-heading">
+        <div><p class="section-kicker">Your shortlist</p><h2>Side by side</h2></div>
+        <button class="text-button" id="clearShortlist" type="button">Clear shortlist</button>
+      </div>
+      <div class="compare-wrap"><table id="compareTable"></table></div>
+    </section>
+
+    <section class="recommendation section-pad">
+      <div class="recommendation-number">01</div>
+      <div>
+        <p class="section-kicker">Current recommendation</p>
+        <h2>Big Sur now.<br>Scotland next.</h2>
+      </div>
+      <div class="recommendation-copy">
+        <p>If the team is small and the aim is emotional impact, Big Sur remains the cleanest concept: four nights, one lodge, one facilitated half-day, redwoods and coast. It is not geographically fair—so make the fairness temporal.</p>
+        <ul>
+          <li>Target late October or the first half of November.</li>
+          <li>Use a group-capable lodge, not a quiet couples-oriented yurt property.</li>
+          <li>Give Scotland travelers recovery time and upgraded long-haul seating.</li>
+          <li>Commit the next gathering to the Highlands or west coast of Scotland.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="method section-pad" id="method">
+      <div><p class="section-kicker">How to use this</p><h2>Decide in two passes</h2></div>
+      <div class="method-steps">
+        <article><span>Pass 1</span><h3>Pick the feeling</h3><p>Coastal reset, Arctic expedition, Atlantic hideaway, forest lodge or tropical decompression.</p></article>
+        <article><span>Pass 2</span><h3>Price the top three</h3><p>Use the same dates, room assumptions, seating policy and contingency buffer. Only then compare totals.</p></article>
+      </div>
+      <div class="assumption-box">
+        <h3>Inputs still needed</h3>
+        <p>Team size · exact Scottish origin · room-sharing policy · total budget · passport/visa mix · mobility and cold-weather comfort · desired work-to-play ratio.</p>
+      </div>
+    </section>
+
+    <section class="sources section-pad" id="sources">
+      <div><p class="section-kicker">Research ledger</p><h2>What this is built on</h2></div>
+      <div class="source-list">
+        <a href="https://www.edinburghairport.com/flights/destinations" target="_blank" rel="noreferrer"><span>Access</span>Edinburgh Airport destinations</a>
+        <a href="https://www.treebonesresort.com/yurts/" target="_blank" rel="noreferrer"><span>Big Sur</span>Treebones capacity and group policy</a>
+        <a href="https://www.parks.ca.gov/AccessibleFeatures/Details/570" target="_blank" rel="noreferrer"><span>Big Sur</span>Big Sur Lodge facilities</a>
+        <a href="https://www.parks.ca.gov/?page_id=565" target="_blank" rel="noreferrer"><span>Big Sur</span>Current road and park advisories</a>
+        <a href="https://visitgreenland.com/destinations/nuuk/" target="_blank" rel="noreferrer"><span>Nuuk</span>Access and seasons</a>
+        <a href="https://visitgreenland.com/plan-your-trip/weather-and-climate/" target="_blank" rel="noreferrer"><span>Nuuk</span>Climate and disruption notes</a>
+        <a href="https://hhe.gl/en/courses-conferences/" target="_blank" rel="noreferrer"><span>Nuuk</span>Hotel Hans Egede group facilities</a>
+        <a href="https://www.bintan-resorts.com/venue/the-meeting-tent/" target="_blank" rel="noreferrer"><span>Bintan</span>Retreat and team facilities</a>
+        <a href="https://www.bintan-resorts.com/about-us/" target="_blank" rel="noreferrer"><span>Bintan</span>Singapore ferry access</a>
+        <a href="https://visitmadeira.com/en" target="_blank" rel="noreferrer"><span>Madeira</span>Official destination information</a>
+        <a href="https://www.exploretnl.ca/automne-hiver" target="_blank" rel="noreferrer"><span>Fogo Island</span>Fall and winter seasonality</a>
+      </div>
+      <p class="updated">Research checked 13 July 2026. Routes, prices, road access and property availability must be revalidated for selected dates.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>TEAM RETREAT FIELD NOTES</span>
+    <span>Local decision artifact · v1.0</span>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
