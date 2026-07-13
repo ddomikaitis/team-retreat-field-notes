@@ -13,6 +13,8 @@ The shortlist is stored in browser `localStorage`; it does not modify these file
 
 Team size is a live scoring input. Selecting `6–10`, `11–29` or `30–40` replaces each destination's generic group-readiness score with a size-specific fit score and operating note.
 
+The Big Sur → Scotland strategy section is connected to the same live ranking. It displays Big Sur's current rank and the current first-place destination, or reports that Big Sur is outside the active filters.
+
 ## Folder structure
 
 ```text

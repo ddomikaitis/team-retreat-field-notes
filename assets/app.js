@@ -143,9 +143,35 @@ function render() {
   const ranked = options.filter(visible).map(option => ({ ...option, weightedScore: score(option) }))
     .sort((a, b) => b.weightedScore - a.weightedScore);
   resultCount.textContent = ranked.length;
-  cards.innerHTML = ranked.length ? ranked.map((option, index) => cardMarkup(option, index)).join('') : '<div class="empty">No destination matches all three filters.</div>';
+  cards.innerHTML = ranked.length ? ranked.map((option, index) => cardMarkup(option, index)).join('') : '<div class="empty">No destination matches the current filters.</div>';
   cards.querySelectorAll('.shortlist').forEach(button => button.addEventListener('click', () => toggleShortlist(button.dataset.id)));
+  renderBigSurRank(ranked);
   renderCompare();
+}
+
+function renderBigSurRank(ranked) {
+  const rankNumber = document.querySelector('#bigSurRankNumber');
+  const statement = document.querySelector('#bigSurRankStatement');
+  const bigSurIndex = ranked.findIndex(option => option.id === 'big-sur');
+
+  if (!ranked.length) {
+    rankNumber.textContent = '—';
+    statement.innerHTML = '<strong>No destinations match the current filters.</strong>';
+    return;
+  }
+
+  const winner = ranked[0].name;
+  if (bigSurIndex === -1) {
+    rankNumber.textContent = '—';
+    statement.innerHTML = `<strong>Big Sur is outside the current filters. ${winner} is live rank 01 among the visible options.</strong>`;
+    return;
+  }
+
+  const displayRank = String(bigSurIndex + 1).padStart(2, '0');
+  rankNumber.textContent = displayRank;
+  statement.innerHTML = bigSurIndex === 0
+    ? '<strong>Big Sur is live rank 01 under the current settings.</strong>'
+    : `<strong>${winner} is live rank 01 and Big Sur is live rank ${displayRank} under the current settings.</strong>`;
 }
 
 function cardMarkup(option, index) {
