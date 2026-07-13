@@ -38,8 +38,8 @@ Team size is a live scoring input. Selecting `6–10`, `11–29` or `30–40` re
 
 ## Current framing
 
-- Current emotional favorite and two-retreat strategy: Big Sur now, Scotland next.
+- Current emotional favorite and optional sequence: whole team in Big Sur in 2026, then a potential whole-team Scotland retreat in 2027.
 - Current expedition choice: Nuuk.
 - Current top single-retreat result under the default weights: Hudson Valley.
 - Current warm, neutral-ground wildcard: Bintan via Singapore.
-- Fairness can be evaluated across a sequence: e.g. Big Sur now and Scotland next.
+- Fairness can be evaluated across a sequence: the entire team attends Big Sur in 2026 and, if committed, the entire team attends Scotland in 2027. This does not mean splitting the team into local retreats.

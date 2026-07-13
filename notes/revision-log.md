@@ -7,6 +7,7 @@
 - Reframed Big Sur → Scotland as a two-retreat strategic alternative rather than a contradictory recommendation #1.
 - Locked the origin assumptions to Edinburgh and El Segundo/LAX.
 - Added team-size-aware ranking for 6–10, 11–29 and 30–40 people, with destination-specific operating notes.
+- Replaced the ambiguous “Scotland next” shorthand with an explicit whole-team sequence: Big Sur in 2026, followed by a potential all-team Scotland retreat in 2027.
 
 ## 2026-07-13 — v1.0
 
