@@ -145,33 +145,37 @@ function render() {
   resultCount.textContent = ranked.length;
   cards.innerHTML = ranked.length ? ranked.map((option, index) => cardMarkup(option, index)).join('') : '<div class="empty">No destination matches the current filters.</div>';
   cards.querySelectorAll('.shortlist').forEach(button => button.addEventListener('click', () => toggleShortlist(button.dataset.id)));
-  renderBigSurRank(ranked);
+  renderRecommendation(ranked);
   renderCompare();
 }
 
-function renderBigSurRank(ranked) {
-  const rankNumber = document.querySelector('#bigSurRankNumber');
-  const statement = document.querySelector('#bigSurRankStatement');
-  const bigSurIndex = ranked.findIndex(option => option.id === 'big-sur');
-
+function renderRecommendation(ranked) {
+  const name = document.querySelector('#recommendationName');
+  const verdict = document.querySelector('#recommendationVerdict');
+  const recommendationScore = document.querySelector('#recommendationScore');
+  const details = document.querySelector('#recommendationDetails');
   if (!ranked.length) {
-    rankNumber.textContent = '—';
-    statement.innerHTML = '<strong>No destinations match the current filters.</strong>';
+    name.textContent = 'No match';
+    verdict.textContent = 'No destination matches the current filters. Relax one or more filters to restore the live recommendation.';
+    recommendationScore.textContent = '—';
+    details.innerHTML = '';
     return;
   }
 
   const winner = ranked[0].name;
-  if (bigSurIndex === -1) {
-    rankNumber.textContent = '—';
-    statement.innerHTML = `<strong>Big Sur is outside the current filters. ${winner} is live rank 01 among the visible options.</strong>`;
-    return;
-  }
-
-  const displayRank = String(bigSurIndex + 1).padStart(2, '0');
-  rankNumber.textContent = displayRank;
-  statement.innerHTML = bigSurIndex === 0
-    ? '<strong>Big Sur is live rank 01 under the current settings.</strong>'
-    : `<strong>${winner} is live rank 01 and Big Sur is live rank ${displayRank} under the current settings.</strong>`;
+  const option = ranked[0];
+  const sizeDetail = state.filters.size === 'all'
+    ? 'Team size is not set; select a size above to refine group readiness.'
+    : `${sizeLabel(state.filters.size)} fit ${option.sizeFit[state.filters.size][0]}/10: ${option.sizeFit[state.filters.size][1]}`;
+  name.textContent = winner;
+  verdict.textContent = option.verdict;
+  recommendationScore.textContent = `${option.weightedScore} / 10`;
+  details.innerHTML = `
+    <li><strong>Best window:</strong> ${option.window}.</li>
+    <li><strong>Minimum stay:</strong> ${option.duration}.</li>
+    <li><strong>Travel:</strong> ${option.route}</li>
+    <li><strong>Team size:</strong> ${sizeDetail}</li>
+    <li><strong>Watch:</strong> ${option.risk}</li>`;
 }
 
 function cardMarkup(option, index) {

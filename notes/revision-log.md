@@ -9,6 +9,7 @@
 - Added team-size-aware ranking for 6–10, 11–29 and 30–40 people, with destination-specific operating notes.
 - Replaced the ambiguous “Scotland next” shorthand with an explicit whole-team sequence: Big Sur in 2026, followed by a potential all-team Scotland retreat in 2027.
 - Connected the Big Sur strategy section to the live ranking so its rank and the current first-place destination update with every scoring or filter change.
+- Replaced the fixed Big Sur strategy feature with a fully dynamic live-rank-01 recommendation. Under default settings, the featured recommendation is Hudson Valley.
 
 ## 2026-07-13 — v1.0
 

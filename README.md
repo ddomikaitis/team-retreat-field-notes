@@ -13,7 +13,7 @@ The shortlist is stored in browser `localStorage`; it does not modify these file
 
 Team size is a live scoring input. Selecting `6–10`, `11–29` or `30–40` replaces each destination's generic group-readiness score with a size-specific fit score and operating note.
 
-The Big Sur → Scotland strategy section is connected to the same live ranking. It displays Big Sur's current rank and the current first-place destination, or reports that Big Sur is outside the active filters.
+The featured recommendation section is connected directly to the live ranking. It always displays the current first-place destination along with its weighted score, timing, travel pattern, team-size fit and primary risk.
 
 ## Folder structure
 
@@ -40,7 +40,7 @@ The Big Sur → Scotland strategy section is connected to the same live ranking.
 
 ## Current framing
 
-- Current emotional favorite and optional sequence: whole team in Big Sur in 2026, then a potential whole-team Scotland retreat in 2027.
+- Separate scenario retained in the planning notes: whole team in Big Sur in 2026, then a potential whole-team Scotland retreat in 2027. This is not the featured recommendation unless Big Sur reaches live rank 01.
 - Current expedition choice: Nuuk.
 - Current top single-retreat result under the default weights: Hudson Valley.
 - Current warm, neutral-ground wildcard: Bintan via Singapore.

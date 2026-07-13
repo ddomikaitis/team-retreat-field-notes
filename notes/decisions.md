@@ -18,7 +18,7 @@ Use this file to preserve choices and avoid reopening settled questions without 
 3. Hudson Valley — practical benchmark.
 4. Bintan — warm neutral-ground wildcard.
 
-The web artifact's numbered cards are a live ranking under the selected weights and filters. The 2026 Big Sur → potential 2027 Scotland section is a separate two-retreat strategy, not an override of live rank 01. Both gatherings would include the entire Edinburgh and El Segundo team; it is not a split-retreat proposal.
+The web artifact's numbered cards are a live ranking under the selected weights and filters. The featured recommendation beneath the cards always mirrors live rank 01. A possible future alternating-host sequence can still be considered during planning, but it is not presented as the current recommendation.
 
 ## Working principles
 
